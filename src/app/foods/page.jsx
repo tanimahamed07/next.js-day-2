@@ -5,6 +5,8 @@ export function generateStaticParams() {
   return [{ id: "52898" }, { id: "52955" }, { id: "52962" }];
 }
 
+
+
 import CartItems from "./CartItems";
 import InputSearch from "@/components/InputSearch";
 const getFoods = async (search) => {
@@ -14,6 +16,11 @@ const getFoods = async (search) => {
   );
   const data = await res.json();
   return data.foods || [];
+};
+
+export const metadata = {
+  title: "All Foods",
+  description: "Best Fast Food in Sirajgonj",
 };
 
 export default async function FoodsPage({ searchParams }) {
