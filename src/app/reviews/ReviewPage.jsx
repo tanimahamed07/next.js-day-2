@@ -2,6 +2,11 @@
 import Review from "@/components/cards/Review";
 import React, { useEffect, useState } from "react";
 import ReviewLoading from "./ReviewLoading";
+import { Anek_Bangla } from "next/font/google";
+
+const anek = Anek_Bangla({
+  weight: ["400"],
+});
 
 export const metadata = {
   title: "All Reviews",
@@ -27,15 +32,16 @@ const ReviewsPage = () => {
   if (loading) {
     return <ReviewLoading></ReviewLoading>;
   }
+  console.log("reviews ------>", reviews);
   return (
-    <div>
+    <div className={anek.className}>
       <h2 className="text-4xl font-bold">
         Total <span className="text-yellow-400">{reviews.length}</span>Found
         Foods
       </h2>
       <div className="grid my-5 grid-cols-3 gap-5">
         {reviews.map((rev) => (
-          <Review key={rev.id} review={rev}></Review>
+          <Review key={rev.id} rev={rev}></Review>
         ))}
       </div>
     </div>

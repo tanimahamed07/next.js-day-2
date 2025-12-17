@@ -1,19 +1,27 @@
 import Link from "next/link";
 import CurtButton from "../buttons/CurtButton";
+import Image from "next/image";
 
 const FoodCard = ({ food, onViewDetails, onAddToCart, id }) => {
-  console.log(food);
+  console.log(food.image);
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Image */}
       <div className="relative h-48 w-full">
         <Link href={"/"}>
-          <img
+          {/* <img
             src={food.foodImg}
             alt={food.title}
             className="h-full w-full object-cover"
-          />
+          /> */}
+          <Image
+            src={food.foodImg}
+            width={300}
+            height={150}
+            alt={food.title}
+            className="h-full w-full object-cover"
+          ></Image>
         </Link>
         <span className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
           {food.category}
