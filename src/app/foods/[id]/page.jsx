@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 
 export async function generateMetadata({params}) {
@@ -49,8 +50,9 @@ console.log(id)
   const food = await getSingleFood(id);
   console.log(food)
 
-  if (!food) {
-    return <h2 className="text-center text-xl">Food not found</h2>;
+  if (!food.title) {
+    redirect('/foods')
+    // return <h2 className="text-center text-xl">Food not found</h2>;
   }
 
   return (

@@ -52,6 +52,9 @@ export default function RootLayout({ children }) {
             <Link prefetch={false} className="btn" href="/reviews">
               Reviews
             </Link>
+            <Link  className="btn" href="/feedbacks">
+              Feedbacks
+            </Link>
           </div>
         </header>
 

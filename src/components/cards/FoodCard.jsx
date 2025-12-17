@@ -3,7 +3,6 @@ import CurtButton from "../buttons/CurtButton";
 import Image from "next/image";
 
 const FoodCard = ({ food, onViewDetails, onAddToCart, id }) => {
-  console.log(food.image);
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
