@@ -12,7 +12,8 @@ const FeedbackCard = ({ feedback, onUpdate, onDelete }) => {
         {/* <span className="text-sm text-gray-500">
           {formatDistanceToNow(new Date(date), { addSuffix: true })}
         </span> */}
-
+        {new Date(feedback.date).toLocaleDateString()},{" "}
+        {new Date(feedback.date).toLocaleTimeString()}
         <div className="flex gap-2">
           <button
             // onClick={() => onUpdate(_id)}

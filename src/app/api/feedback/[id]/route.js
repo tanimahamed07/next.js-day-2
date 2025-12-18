@@ -1,5 +1,5 @@
-import { connect } from "../../../lib/dbConnect";
 import { ObjectId } from "mongodb";
+import { connect } from "../../../../lib/dbConnect";
 
 const feedbackCollection = connect("feedbacks");
 
